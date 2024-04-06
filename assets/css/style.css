@@ -19,9 +19,16 @@ a{
     color: currentColor;
 }
 .global-btn {
+    display: inline-block;
     background-color: var(--primary);
     color: var(--text-white);
     border-radius: 20px;
+    transition: .6s all ease;
+}
+
+.global-btn:hover {
+    background-color: var(--secondary);
+    color: var(--text-white);
 }
 
 .heading {
@@ -143,6 +150,7 @@ a{
     border-radius: 35px;
     width: 50vw;
     height: 50px;
+    padding-left: 50px;
 }
 #search form button {
     color: var(--text-white);
@@ -174,6 +182,7 @@ a{
 #strength .strength-content .wrapper:hover {
     background-color: var(--primary);
     color: var(--text-white);
+    transform: scale(1.05);
 }
 
 #strength .strength-content .wrapper:hover h6 {
@@ -235,16 +244,296 @@ a{
 #review{
     position: relative;
     padding: 80px 0;
-    /* overflow: hidden; */
+    height: 80vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
 }
 
-/* #review .review-content {
+#review .review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#review .review-content h6 {
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#review .review-content h5 {
+    font-size: 2rem;
+    font-weight: 800;
+    padding-top: 10px;
+    color: var(--text-white);
+}
+
+#review .splide {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 80px !important;
+    color: var(--text-white);
+}
+
+.splide__pagination {
+   bottom: -50px !important;
+}
+
+.splide__pagination__page {
+    height: 15px !important;
+    width: 15px !important;
+}
+
+.splide__pagination__page.is-active {
+    background: var(--primary) !important;
+}
+
+#hire {
+    padding: 80px 0;
+}
+
+#hire .hire-wrapper {
+    text-align: center;
+    border: 2px solid #00A9E0;
+    border-radius: 15px;
+    padding: 25px 50px
+}
+
+#hire .hire-wrapper-right {
+    border: 2px solid var(--primary);
+}
+
+#hire .hire-wrapper .icons i {
+    font-size: 100px;
+    color: #00A9E0;
+}
+
+#hire .hire-wrapper-right .icons i {
+    color: var(--primary);
+}
+
+#hire .hire-wrapper .hire-content {
+    margin-top: 30px;
+}
+
+#hire .hire-wrapper .hire-content h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00A9E0;
+}
+
+#hire .hire-wrapper-right .hire-content h5 {
+    color: var(--primary);
+}
+
+#hire .hire-wrapper .hire-content p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-black);
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+#hire .hire-wrapper .hire-content .global-btn {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    margin-top: 30px;
+    background-color: #00A9E0;
+}
+
+#hire .hire-wrapper-right .hire-content .global-btn {
+    background-color: #F48C06;
+}
+
+#news {
+    padding-bottom: 80px;
+}
+
+#news .news-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#news .news-wrapper:hover img,
+#news .news-wrapper-right:hover img
+{
+    transform: scale(1.1);
+}
+
+#news .news-wrapper .images {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#news .news-wrapper-right .images {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#news .news-wrapper-right .images {
+    width: 500px;
+}
+
+#news .news-wrapper .images img,
+#news .news-wrapper-right .images img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s all ease;
+}
+
+#news .news-wrapper .news-info {
+    padding: 30px 0;
+}
+
+#news .news-wrapper .news-info h6 {
+    font-size: 1.2rem;
+    color: var(--text-black);
+    font-weight: 600;
+    line-height: 29px;
+    transition: .6s all ease;
+}
+
+#news .news-wrapper:hover h6,
+#news .news-wrapper-right:hover h6
+{
+    color: var(--primary);
+}
+
+#news .news-wrapper .news-info p {
+    font-size: 1rem;
+    color: #0D0D0D;
+    font-size: 0.9rem;
+}
+
+#news .news-wrapper-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#news .news-wrapper-right h6 {
+    transition: .6s all ease;
+}
+
+#serve {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+#serve .serve-content {
+    margin-top: 40px;
+}
+
+#serve .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#serve .serve-content .images {
+    position: relative;
+    transition: .6s all ease;
+}
+
+#serve .serve-content .images:hover{
+    transform: translateY(-10px);
+}
+
+#serve .serve-content .images h5 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-} */
+    /* bottom: 0; */
+    left: 0;
+    background-color: #424D58;
+    width: 100%;
+    color: var(--text-white);
+    text-align: center;
+    padding: 20px 0;
+}
 
+#about {
+    padding: 80px 0;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    color: var(--text-white)
+}
 
+#about .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0;
+    width: 70%;
+    margin: 0 auto;
+}
 
+#about h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#about p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-top: 35px;
+    line-height: 29px;
+}
+
+#employer {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 80vh;
+}
+
+#employer .employer-right {
+    position: relative;
+}
+
+#employer .employer-content {
+    position: absolute;
+    top: 40%;
+    transform: translateY(20%);
+    left: 30px;
+}
+
+#employer .employer-content h5 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: 3A556A;
+}
+
+#employer .employer-content h6 {
+    padding-top: 15px;
+}
+
+#employer .employer-content p {
+    padding-top: 25px;
+    font-weight: 500;
+}
+
+#employer .employer-content p span {
+    font-weight: 800;
+}
+
+#employer .employer-content .global-btn {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
  
